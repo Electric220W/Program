@@ -1,0 +1,21 @@
+Program A1;
+uses crt;
+var n, m, rnd, i: integer;
+    c: real;
+Begin
+    writeln('Введите длину последовательности:');
+    readln(n);
+    writeln('Введите число делитель:');
+    readln(m);
+    
+    for i:=1 to n do
+        begin
+        rnd:=random(97)+2;
+        if (rnd mod m) = 0 then
+            begin
+                c:=c+rnd;
+            end;
+        end;
+        writeln('-----');
+        writeln('Сумма чисел, делящихся на ', m, ' без остатка = ', c);
+end.
